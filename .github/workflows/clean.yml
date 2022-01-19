@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 jobs:
   job_one:
-    name: clone
+    name: clean
     runs-on: Ubuntu-latest
     steps:
     - name: testing
@@ -19,5 +19,4 @@ jobs:
         port: ${{ secrets.PORT }}
         script: |
           unalias rm
-	        rm -rf cmsc388T-web-template
-        
+	  rm -rf cmsc388T-web-template
