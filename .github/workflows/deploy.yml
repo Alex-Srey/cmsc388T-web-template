@@ -3,7 +3,8 @@
 name: Deploy Workflow
 
 # Controls when the workflow will run
-on: 
+on:
+  workflow_dispatch:
   push:
     branches: [main]
 jobs:
@@ -21,3 +22,5 @@ jobs:
         script: |
           cd cmsc388T-web-template
           git pull
+          cd ..
+          cp -r cmsc388T-web-template/ ../pub/
