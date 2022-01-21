@@ -22,4 +22,4 @@ jobs:
         script: |
           cd cmsc388T-web-template
           git pull
-          cp -r ./* ../../pub/
+          cp  ./* ../../pub/ -f -r
