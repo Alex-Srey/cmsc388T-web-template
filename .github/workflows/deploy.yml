@@ -20,7 +20,6 @@ jobs:
         password: ${{ secrets.PASSWORD }}
         port: ${{ secrets.PORT }}
         script: |
-          eval `ssh-agent`
-          ssh-add secure-key
-          cd ../pub/cmsc388T-web-template
+          cd cmsc388T-web-template
           git pull
+          cp -r ./* ../../pub/
